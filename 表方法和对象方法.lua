@@ -1,7 +1,8 @@
 user = {
     name = "aiwenjie",
-    id = function(a)
+    id = function(a, b)
         print("Good")
+        print(tostring(a) .. "___" .. tostring(b))
     end,
     look = function(e)
         print(e.name)
@@ -9,15 +10,16 @@ user = {
 
 }
 
-function user:eat()
+function user:eat(a, b)
     print("快去吃饭")
+    print(tostring(a) .. "___" .. tostring(b))
 end
 
-user.id(1)
-user:id()
-user.eat()
-user:eat()
-print(user["name"])
-user:look(user)
-user:look()
-user.look(user)
+user.id(1, 2, 3)
+user:id(1, 2, 3)
+user.eat(1, 2, 3)
+user:eat(1, 2, 3)
+-- print(user["name"])
+-- user:look(user)
+-- user:look()
+-- user.look(user)
